@@ -15,16 +15,18 @@
 ////////////////////////////////////////////////////////////////////////////////
 package com.google.pubsub.kafka.common;
 
+import java.io.IOException;
+import java.util.concurrent.Executors;
+
 import com.google.api.gax.core.CredentialsProvider;
 import com.google.protobuf.ByteString;
+
 import io.grpc.Channel;
 import io.grpc.ClientInterceptors;
 import io.grpc.ManagedChannel;
 import io.grpc.auth.ClientAuthInterceptor;
-import io.grpc.netty.NegotiationType;
-import io.grpc.netty.NettyChannelBuilder;
-import java.io.IOException;
-import java.util.concurrent.Executors;
+import io.grpc.netty.shaded.io.grpc.netty.NegotiationType;
+import io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder;
 
 /** Utility methods and constants that are repeated across one or more classes. */
 public class ConnectorUtils {
